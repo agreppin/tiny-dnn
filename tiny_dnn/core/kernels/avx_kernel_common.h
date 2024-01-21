@@ -11,6 +11,8 @@
 #error Advanced Vector Extensions required.
 #endif
 
+#include <immintrin.h>
+
 #ifndef _mm256_set_m128
 #define _mm256_set_m128(va, vb) \
   _mm256_insertf128_ps(_mm256_castps128_ps256(vb), va, 1)
@@ -211,7 +213,7 @@ struct m256_shift_left_impl {};
 
 template <unsigned int N>
 struct m256_shift_left_impl<N, Range<N == 0>> {
-  static __m256 doit(__m256i a) { return a; }
+  static __m256 doit(__m256 a) { return a; }
 };
 
 template <unsigned int N>

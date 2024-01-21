@@ -1,6 +1,8 @@
 SET(INTEL_MKL_INCLUDE_SEARCH_PATHS
     /usr/include
+    /usr/include/mkl
     /usr/local/include
+    /usr/local/include/mkl
     /opt/intel/compilers_and_libraries/linux/mkl
     /opt/intel/compilers_and_libraries/linux/mkl/include
     ${MKLROOT}

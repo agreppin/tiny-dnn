@@ -1,0 +1,30 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 4038875..d1f68cc 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -31,14 +31,14 @@ endif()
+ target_include_directories(benchmark PUBLIC ${PROJECT_SOURCE_DIR}/include)
+ 
+ # Install target (will install the library to specified CMAKE_INSTALL_PREFIX variable)
+-install(
+-  TARGETS benchmark
+-  ARCHIVE DESTINATION lib
+-  LIBRARY DESTINATION lib
+-  RUNTIME DESTINATION bin
+-  COMPONENT library)
+-
+-install(
+-  DIRECTORY "${PROJECT_SOURCE_DIR}/include/benchmark"
+-  DESTINATION include
+-  FILES_MATCHING PATTERN "*.*h")
++#install(
++#  TARGETS benchmark
++#  ARCHIVE DESTINATION lib
++#  LIBRARY DESTINATION lib
++#  RUNTIME DESTINATION bin
++#  COMPONENT library)
++#
++#install(
++#  DIRECTORY "${PROJECT_SOURCE_DIR}/include/benchmark"
++#  DESTINATION include
++#  FILES_MATCHING PATTERN "*.*h")

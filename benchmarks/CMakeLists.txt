@@ -3,6 +3,7 @@ download_project(
         PROJ benchmark
         GIT_REPOSITORY https://github.com/google/benchmark.git
         GIT_TAG v1.1.0
+        PATCH_COMMAND "git apply < ${CMAKE_CURRENT_LIST_DIR}/../benchmarks/benchmark.patch"
         UPDATE_DISCONNECTED 1
 )
 

@@ -73,8 +73,6 @@ set(@PACKAGE_NAME@_CONFIG_INCLUDED TRUE)
 
 @PACKAGE_INIT@
 
-# compute current config file and
-get_filename_component(PACKAGE_PREFIX_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
 list(APPEND CMAKE_MODULE_PATH "${PACKAGE_PREFIX_DIR}")
 
 if(NOT TARGET @project_library_target_name@)

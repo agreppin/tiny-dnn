@@ -165,9 +165,9 @@ if(USE_CBLAS)
     # will require to find CBLAS in your system.
     find_package(BLAS REQUIRED)
     if(BLAS_FOUND)
-        if (NOT EXISTS "/usr/include/cblas.h" OR NOT EXISTS ${BLAS_LIBRARIES})
-            message(FATAL_ERROR "CBLAS path error.")
-        endif()
+        # Ubuntu: please don't install both MKL and OpenBLAS/BLIS/ATLAS,
+        # check with update-alternatives --display libblas.so-x86_64-linux-gnu
+        message(STATUS "USE_CBLAS BLAS_LIBRARIES: ${BLAS_LIBRARIES}")
         add_definitions(-DCNN_USE_CBLAS)
         list(APPEND REQUIRED_LIBRARIES ${BLAS_LIBRARIES})
     else()

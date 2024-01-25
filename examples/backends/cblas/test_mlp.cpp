@@ -31,8 +31,9 @@ int main(int argc, char **argv) {
     construct_net(nn_cblas, tiny_dnn::core::backend_t::cblas);
 
     tiny_dnn::vec_t input;
+    unsigned int seed1;
     for (size_t i = 0; i < SIZE; i++) {
-      input.push_back(rand_r() / RAND_MAX);
+      input.push_back(rand_r(&seed1) / RAND_MAX);
     }
     auto output_internal = nn_internal.fprop(input);
     auto output_cblas    = nn_cblas.fprop(input);

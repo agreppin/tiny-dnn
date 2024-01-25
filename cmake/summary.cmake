@@ -76,7 +76,7 @@ function(tinydnn_print_configuration_summary)
 
     tinydnn_merge_flag_lists(__flags_rel CMAKE_CXX_FLAGS_RELEASE CMAKE_CXX_FLAGS)
     tinydnn_merge_flag_lists(__flags_deb CMAKE_CXX_FLAGS_DEBUG CMAKE_CXX_FLAGS)
-    message(STATUS "CMAKE_CXX_FLAGS: " ${CMAKE_CXX_FLAGS})
+
     tinydnn_status("")
     tinydnn_status("******************* tiny-dnn Configuration Summary *******************")
     tinydnn_status("General:")

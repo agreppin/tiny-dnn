@@ -41,7 +41,7 @@
 #include "tiny_dnn/layers/global_average_pooling_layer.h"
 #include "tiny_dnn/layers/input_layer.h"
 #include "tiny_dnn/layers/l2_normalization_layer.h"
-#include "tiny_dnn/layers/lrn_layer.h"
+#include "tiny_dnn/layers/linear_layer.h"
 #include "tiny_dnn/layers/lrn_layer.h"
 #include "tiny_dnn/layers/max_pooling_layer.h"
 #include "tiny_dnn/layers/max_unpooling_layer.h"
